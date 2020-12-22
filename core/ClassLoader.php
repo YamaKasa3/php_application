@@ -8,7 +8,8 @@ class ClassLoader
     {
         /*
         SPL The Standard PHP Library
-        ファイルを読み込んだときに、そのファイルがないときのエラーに対処する
+        ファイルを読み込んだときに、そのファイルがないときのエラーに対処するために、
+        自分自身のloadClass()メソッドを登録する
         */
         spl_autoload_register(array($this, 'loadClass'));
     }
