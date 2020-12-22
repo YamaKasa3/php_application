@@ -76,7 +76,7 @@ class Request
     }
 
     /*
-    PATH_INFOは基本的にはREQUEST_URLからベースURLを取り除いた値となる
+    PATH_INFOは基本的にはREQUEST_URIからベースURLを取り除いた値となる
     */
     public function getPathInfo()
     {
