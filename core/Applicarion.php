@@ -7,6 +7,7 @@ abstract class Application
     protected $response;
     protected $session;
     protected $db_manager;
+    protected $login_action = array();
 
     public function __construct($debug = false)
     {
@@ -143,7 +144,7 @@ abstract class Application
     public function render404Page($e)
     {
         $this->response->setStatusCode(404, 'Not Found');
-        $message = $this->isDebugmode() ? $e->getMessage() : 'PAge not found.';
+        $message = $this->isDebugmode() ? $e->getMessage() : 'Page not found.';
         $message = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
 
         $this->response->setContent(<<<EOF
